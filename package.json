@@ -1,0 +1,26 @@
+{
+  "name": "cd-key-generator",
+  "version": "1.0.0",
+  "description": "simple cd-key generator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rstefanic/cd-key-generator.git"
+  },
+  "keywords": [
+    "cd-key",
+    "generator",
+    "javascript",
+    "js",
+    "node.js"
+  ],
+  "author": "Robert Stefanic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rstefanic/cd-key-generator/issues"
+  },
+  "dependencies": {}
+}
