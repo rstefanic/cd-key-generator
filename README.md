@@ -6,9 +6,9 @@
 
 1. In order to run the program, a flag followed by an argument needs to be passed in every case.
   * These are the flags that may be passed:
-    * -g       --generate
+    * -g    ||   --generate
       * This flag tells the program to generate a key. This flag takes one argument, which tells the program how many groupings of the key to generate.
-    * -d      --decypher
+    * -d    ||   --decypher
       * This flag tells the program to decypher or decode a current key and see if it matches our algorithm. This flag also takes an argument, which is the key that needs to be decyphered. The key must be entered as 1 string, with a '-' character to separate the groupings.
 
 
