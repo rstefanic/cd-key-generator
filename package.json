@@ -1,6 +1,6 @@
 {
   "name": "cd-key-generator",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "simple key generator",
   "main": "app.js",
   "scripts": {

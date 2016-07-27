@@ -1,6 +1,7 @@
 var generate = require("./src/generate-key.js"),
       message = require("./src/message.js"),
-      decypher = require("./src/decypher-key.js");
+      decypher = require("./src/decypher-key.js"),
+            error = require("./src/error.js");
 
 var arguments = process.argv.slice(2);
 
@@ -9,7 +10,7 @@ if (arguments[0] == null) {
 } else if ((arguments[0] == "-g") || (arguments[0] == "--generate")) {
   var length = arguments[1] || null;
   if (length === null) {
-    console.error("Please input the amount of groupings that you'd like the key to have.");
+    error.printError(01, "Please input the amount of groupings that you'd like the key to have.");
   } else {
     message.displayKey(generate.createKey(arguments[1]));
   }

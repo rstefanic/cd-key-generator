@@ -14,8 +14,12 @@
 
 ## Errors
 
-* If the error is in the 100s, then the error belongs to a problem with generating a key, if the error is in the 200s, then the error belongs to a problem with decyphering a valid key
+* If the error is less than 100, then it's an error with the parameters running the program. If the error is in the 100s, then the error belongs to a problem with generating a key, if the error is in the 200s, then the error belongs to a problem with decyphering a valid key
 
-###### 200s
+### 000
+  1. 01
+    * The amount of groupings for the keys entered was either absent, or invalid.
+
+### 200s
   1. 201
     * The key that was entered in to be decyphered was invalid. It could be that there were more than 5 characters per grouping, an extra space, or an improper format that didn't include '-' characters in it.
