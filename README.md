@@ -14,4 +14,4 @@
 
 ## Errors
 
-### If the error is in the 100s, then the error belongs to an error with generating a key, if the error is in the 200s, then the error belongs to a problem with decyphering a valid key
+* If the error is in the 100s, then the error belongs to a problem with generating a key, if the error is in the 200s, then the error belongs to a problem with decyphering a valid key
