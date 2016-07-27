@@ -14,5 +14,9 @@ if (arguments[0] == null) {
     message.displayKey(generate.createKey(arguments[1]));
   }
 } else if ((arguments[0] == "-d") || (arguments[0] == "--decyper")) {
-    decypher.decypher(arguments[1]);
+    if (decypher.decypher(arguments[1]) === true) {
+      message.displayKeyValidity(true, arguments[1]);
+    } else {
+      message.displayKeyValidity(false, arguments[1]);
+    }
 }

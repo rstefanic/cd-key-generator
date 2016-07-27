@@ -24,7 +24,6 @@ var fiveValues = function() {
       return fiveValues();
     }
   }
-
   return everyFiveKey;
 };
 

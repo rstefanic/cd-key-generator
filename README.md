@@ -15,3 +15,7 @@
 ## Errors
 
 * If the error is in the 100s, then the error belongs to a problem with generating a key, if the error is in the 200s, then the error belongs to a problem with decyphering a valid key
+
+###### 200s
+  1. 201
+    * The key that was entered in to be decyphered was invalid. It could be that there were more than 5 characters per grouping, an extra space, or an improper format that didn't include '-' characters in it.
