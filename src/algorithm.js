@@ -8,7 +8,7 @@ var fiveValues = function() {
   var everyFiveSum = 0;
   var everyFiveKey = "";
 
-  for (var i = 0; i < 4; i++){
+  for (var i = 0; i < 5; i++){
     var currentValue = Math.floor((Math.random() * 74) + 48) + createSalt();
 
     //start from characters 48 until 122; skip ascii values 58-64 and 91-96
@@ -20,7 +20,7 @@ var fiveValues = function() {
     everyFiveSum += currentValue;
     everyFiveKey += String.fromCharCode(currentValue);
     console.log(everyFiveKey);
-    if (everyFiveSum > 350) {
+    if (everyFiveSum > 300) {
       return fiveValues();
     }
   }
