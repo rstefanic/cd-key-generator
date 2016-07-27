@@ -19,7 +19,7 @@ var fiveValues = function() {
 
     everyFiveSum += currentValue;
     everyFiveKey += String.fromCharCode(currentValue);
-    console.log(everyFiveKey);
+    // console.log(everyFiveKey);
     if (everyFiveSum > 300) {
       return fiveValues();
     }
@@ -28,15 +28,15 @@ var fiveValues = function() {
   return everyFiveKey;
 };
 
-function create_key(groupings) {
+function createKey(groupings) {
   var key = "";
   for (var i = 0; i < groupings; i++){
     key += fiveValues();
     if (i !== groupings - 1) {
-      key += " - ";
+      key += "-";
     }
   }
   return key;
 }
 
-module.exports.create_key = create_key;
+module.exports.createKey = createKey;
