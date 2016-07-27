@@ -6,11 +6,11 @@ var generate = require("./src/generate-key.js"),
 var arguments = process.argv.slice(2);
 
 if (arguments[0] == null) {
-  console.error("Sorry, there were no arguments passed. Please refer to the documentation for information on how to generate or decypher a key.");
+  error.printError(01,"NO ARGUMENTS PASSED");
 } else if ((arguments[0] == "-g") || (arguments[0] == "--generate")) {
   var length = arguments[1] || null;
   if (length === null) {
-    error.printError(01, "Please input the amount of groupings that you'd like the key to have.");
+    error.printError(02, "GROUPING NUMBER ERROR");
   } else {
     message.displayKey(generate.createKey(arguments[1]));
   }
