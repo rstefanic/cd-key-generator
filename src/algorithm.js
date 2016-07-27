@@ -4,11 +4,11 @@ var createSalt = function(){
   return salt;
 };
 
-function create_key(keylength) {
-  var key = "";
-  var everyFour = 0;
+var fiveValues = function() {
+  var everyFiveSum = 0;
+  var everyFiveKey = "";
 
-  for (var i = 0; i <= keylength; i++){
+  for (var i = 0; i < 4; i++){
     var currentValue = Math.floor((Math.random() * 74) + 48) + createSalt();
 
     //start from characters 48 until 122; skip ascii values 58-64 and 91-96
@@ -16,15 +16,26 @@ function create_key(keylength) {
               || (currentValue < 48) || (currentValue > 122)) {
       currentValue = Math.floor((Math.random() * 74) + 48) + createSalt();
     }
-    key += String.fromCharCode(currentValue);
-    everyFour++;
 
-    if (everyFour === 4 && i !== keylength) {
-      key += " - ";
-      everyFour = 0;
+    everyFiveSum += currentValue;
+    everyFiveKey += String.fromCharCode(currentValue);
+    console.log(everyFiveKey);
+    if (everyFiveSum > 350) {
+      return fiveValues();
     }
   }
 
+  return everyFiveKey;
+};
+
+function create_key(groupings) {
+  var key = "";
+  for (var i = 0; i < groupings; i++){
+    key += fiveValues();
+    if (i !== groupings - 1) {
+      key += " - ";
+    }
+  }
   return key;
 }
 
