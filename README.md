@@ -18,6 +18,8 @@
 
 ### 000
   1. 01
+    * There were no arguments or flags that were passed into the program.
+  2. 02
     * The amount of groupings for the keys entered was either absent, or invalid.
 
 ### 200s

@@ -30,7 +30,7 @@ var decypher = function(key) {
   if (validKey(key)) {
     key.forEach(function(group) {
       isAValidKey = validate(group);
-      isAValidKey  ? validGroup++ : invalidGroup++;
+      isAValidKey ? validGroup++ : invalidGroup++;
     });
       if (invalidGroup > 0) {
         isAValidKey = false;
